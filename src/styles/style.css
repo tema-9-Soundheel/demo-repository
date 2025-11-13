@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Forside */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Hero */
+.logo_box {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+}
+
+.logo_box .logo {
+  width: 80px;
+  margin-bottom: 1.5rem;
+}
+
+.logo_box h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.logo_box span {
+  color: #6b1b14; /* Mørk rød accent */
+  font-weight: 600;
+}
+
+/* Sections */
+.section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.section-content {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.section-content.reverse {
+  direction: rtl;
+}
+
+.section-content.reverse .text {
+  direction: ltr;
+}
+
+/* Baggrunde */
+.section-green {
+  background-color: #a0a692;
+  color: #fdfdfd;
+}
+
+.section-grey {
+  background-color: #718a86;
+  color: #fdfdfd;
+}
+
+.section-light {
+  background-color: #f2ecec;
+  color: #333;
+}
+
+/* Tekst */
+.text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.text span {
+  color: #a6281d;
+  font-weight: 700;
+}
+
+.text p {
+  margin-bottom: 1rem;
+}
+
+/* Illustrationer */
+.illustration img {
+  max-width: 100%;
+}
+
+/* Knap*/
+.btn {
+  display: inline-block;
+  background-color: #444939;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #222;
+}
