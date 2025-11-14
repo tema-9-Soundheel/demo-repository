@@ -108,3 +108,90 @@ body {
 .btn:hover {
   background-color: #222;
 }
+
+/* Footer */
+.footer {
+  background-color: #2b0f0f;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-top {
+  background-image: url("img/footer-heste.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  background-position: center 0px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 25px;
+  animation: spin 15s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.store-btn img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+.footer-bottom {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 180px;
+  text-align: left;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.newsletter-input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  max-width: 220px;
+}
+
+@media (max-width: 700px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .newsletter-input {
+    margin: 0 auto;
+  }
+}
