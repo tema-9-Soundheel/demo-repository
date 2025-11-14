@@ -195,3 +195,96 @@ body {
     margin: 0 auto;
   }
 }
+
+/* --- Navigation --- */
+.nav {
+  background-color: #f5f0e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Logo */
+.nav__logo img {
+  width: 60px;
+  height: auto;
+}
+
+/* Burger menu (kun mobil) */
+.nav__burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__burger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Links - fullscreen dropdown på mobil */
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #f5f0e7;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.nav__links.open {
+  right: 0;
+}
+
+/* Links styling */
+.nav__links a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #3b1314;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav__links a:hover {
+  color: #a6281d;
+}
+
+/* --- Desktop version --- */
+@media (min-width: 768px) {
+  .nav__burger {
+    display: none; /* Burger forsvinder */
+  }
+
+  .nav__links {
+    position: static;
+    height: auto;
+    flex-direction: row;
+    gap: 2rem;
+    background: none;
+    padding: 0;
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .nav__links a {
+    font-size: 1rem;
+    color: #222;
+  }
+}
