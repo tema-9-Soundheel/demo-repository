@@ -113,12 +113,12 @@ body {
 .footer {
   background-color: #2b0f0f;
   color: white;
-  padding: 40px 20px;
+
   text-align: center;
 }
 
 .footer-top {
-  background-image: url("img/footer-heste.png");
+  background-image: url("img/heste-footer.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -145,7 +145,7 @@ body {
 .store-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
 }
 
 .store-btn img {
@@ -153,13 +153,19 @@ body {
   height: auto;
   cursor: pointer;
 }
+
+.store-btn img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
 .footer-bottom {
   margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  flex-wrap: wrap;
+  text-align: center;
+  place-items: center;
+  padding: 2% 5%;
 }
 
 .footer-col {
@@ -180,13 +186,19 @@ body {
   width: 100%;
   max-width: 220px;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 @media (max-width: 700px) {
   .footer-bottom {
-    flex-direction: column;
+    display: block;
     text-align: center;
   }
 
+  .footer-bottom > * {
+    margin-bottom: 20px;
+  }
   .footer-col {
     text-align: center;
   }
