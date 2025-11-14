@@ -113,12 +113,12 @@ body {
 .footer {
   background-color: #2b0f0f;
   color: white;
-  padding: 40px 20px;
+
   text-align: center;
 }
 
 .footer-top {
-  background-image: url("img/footer-heste.png");
+  background-image: url("img/heste-footer.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -155,11 +155,12 @@ body {
 }
 .footer-bottom {
   margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  flex-wrap: wrap;
+  text-align: center;
+  place-items: center;
+  padding: 2% 5%;
 }
 
 .footer-col {
@@ -183,10 +184,13 @@ body {
 
 @media (max-width: 700px) {
   .footer-bottom {
-    flex-direction: column;
+    display: block; /* ingen grid */
     text-align: center;
   }
 
+  .footer-bottom > * {
+    margin-bottom: 20px; /* lidt luft mellem sektioner */
+  }
   .footer-col {
     text-align: center;
   }
