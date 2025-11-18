@@ -490,7 +490,6 @@ a {
   .omos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
   }
   .nav__circle {
     width: 150px;
