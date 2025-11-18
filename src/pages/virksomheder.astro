@@ -26,15 +26,23 @@ console.log("supaData", supaData);
   }
   .Virksomhed_hero {
     background: #d2d7d3 !important;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 80px 0 40px;
+    padding: 30px 20px;
+    max-height: 400px;
+    box-sizing: border-box;
   }
+
   .Virksomhed_hero img {
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 650px;
+    max-width: 1000px;
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
   }
 
   .Virksomhed_section {
@@ -46,6 +54,7 @@ console.log("supaData", supaData);
   h1 {
     font-size: 2.6rem;
     color: #5c2d21;
+    padding-left: 50px;
   }
   h2 {
     margin-top: 40px;
@@ -54,6 +63,7 @@ console.log("supaData", supaData);
   .Virksomhed_subtext {
     font-size: 1.3rem;
     margin-bottom: 20px;
+    padding-left: 50px;
   }
   .Virksomhed_button {
     background: #4e5644;
@@ -63,11 +73,13 @@ console.log("supaData", supaData);
     display: inline-block;
     text-decoration: none;
     margin-top: 20px;
+    margin-left: 50px;
   }
   .Virksomhed_pricebox {
     margin-top: 40px;
     font-size: 1.3rem;
     font-weight: bold;
+    padding-left: 50px;
   }
   .Virksomhed_twoColumn {
     display: flex;
@@ -80,12 +92,15 @@ console.log("supaData", supaData);
   .Virksomhed_right {
     flex: 1;
     min-width: 300px;
+    padding-left: 50px;
   }
-  ul {
-    padding-virksomhed_left: 20px;
-  }
+
   .Virksomhed_icons img {
-    width: 120px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .Virksomhed_kidsImg {
     width: 250px;
@@ -96,6 +111,9 @@ console.log("supaData", supaData);
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 60px;
+  }
+  .Virksomhed_p {
+    padding-left: 50px;
   }
 </style>
 <PageLayout>
@@ -116,7 +134,7 @@ console.log("supaData", supaData);
     <div class="Virksomhed_twoColumn">
       <div class="Virksomhed_left">
         <h2 class="Virksomhed_h2">Op til 100 medarbejdere</h2>
-        <p class="Virksomhed_p">Fuld adgang til SoundWheel Work</p>
+        <p class="Virksomhed_p1">Fuld adgang til SoundWheel Work</p>
         <ul class="Virksomhed_ul">
           <li class="Virksomhed_li">Musikdrevne visualiseringsøvelser</li>
           <li class="Virksomhed_li">Dansk eller engelsk guide</li>
@@ -134,18 +152,14 @@ console.log("supaData", supaData);
           <li class="Virksomhed_li">4 temaer: Sov godt, Ny energi, Stå sikkert, Balance</li>
         </ul>
 
-        <img src="kids-illustration.jpg" class="Virksomhed_kidsImg" alt="illustration" />
+        <img src="/img/pige-der-lytter1 1.webp" class="Virksomhed_kidsImg" alt="illustration" />
       </div>
 
       <div class="Virksomhed_right Virksomhed_icons">
-        <img src="phones.jpg" alt="phones" />
-        <p class="Virksomhed_p">Adgang til vores komplette bibliotek af lydrejser.</p>
-
-        <img src="group-icon.jpg" alt="group" />
-        <p class="Virksomhed_p">Brugervenligt adminpanel tilføj medarbejdere med et klik.</p>
-
-        <img src="stats-icon.jpg" alt="stats" />
-        <p class="Virksomhed_p">Statistikker der giver indsigt i værdien SoundWheel skaber.</p>
+        <div class="telefoner">
+          <img src="/img/telefoner.webp" alt="telefoner med soundwheel app" />
+        </div>
+        <img src="/img/kasse-virksomheder.webp" alt="kasse med soundwheel for virksomheder" />
       </div>
     </div>
 
