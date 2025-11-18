@@ -127,7 +127,7 @@ video {
 }
 
 .footer-top {
-  background-image: url("img/heste-footer.png");
+  background-image: url("/img/heste-footer.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
