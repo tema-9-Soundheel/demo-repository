@@ -348,6 +348,69 @@ a {
   padding: 1.5rem 1.5rem;
 }
 
+/* App */
+
+.app-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: #fff;
+  gap: 60px;
+}
+
+.content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Add this to center children horizontally */
+  max-width: 700px; /* Optional: set a max width */
+  margin: 0 auto; /* Center the block itself */
+}
+
+.qr-wrapper {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.appleqr,
+.googleqr {
+  max-width: 100%;
+}
+
+.qr-item {
+  text-align: center;
+}
+
+.qr-item p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.qr-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* --- Desktop layout for Om os --- */
 @media (min-width: 900px) {
   .omos-grid {
