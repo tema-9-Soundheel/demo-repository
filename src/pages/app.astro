@@ -3,5 +3,29 @@ import PageLayout from "../layout/pagelayout.astro";
 ---
 
 <PageLayout>
-  <h1>Astro</h1>
+
+    <section class="app-section">
+  <div class="content">
+    <h2>Vores app</h2>
+    <p>Download ved at scanne<br>QR-koden</p>
+
+    <div class="qr-wrapper">
+      <div class="qr-item">
+        <p>Apple</p>
+        <img src="public/img/appleurl.png" class="appleqr" alt="Apple QR">
+      </div>
+
+      <div class="qr-item">
+        <p>Google</p>
+        <img src="public/img/googleurl.png" class="googleqr" alt="Google QR">
+      </div>
+    </div>
+  </div>
+
+  <div class="phone">
+    <img src="public/img/app.png" alt="Phone mockup">
+  </div>
+</section>
+
+
 </PageLayout>
