@@ -189,7 +189,7 @@ video {
 }
 
 .footer-top {
-  background-image: url("img/heste-footer.png");
+  background-image: url("/img/heste-footer.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -575,7 +575,6 @@ a {
   .omos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
   }
   .nav__circle {
     width: 150px;
