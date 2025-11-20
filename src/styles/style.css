@@ -28,7 +28,7 @@ video {
 .hero-text {
   position: absolute;
   left: 1.25rem;
-  bottom: 1.25rem;
+  top: 35rem;
   color: #fff;
   z-index: 10;
   line-height: 1.1;
@@ -39,28 +39,61 @@ video {
 }
 .hero-text p {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
+}
+
+.hero-center {
+  position: absolute;
+  left: 43rem;
+  top: 40rem;
+  color: #fff;
+  z-index: 10;
+  padding: 0.35rem 0.6rem;
+  width: 100px;
+  animation: float 1.8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); /* Startposition */
+  }
+  50% {
+    transform: translateY(-30px); /* Flyv op 20px */
+  }
+  100% {
+    transform: translateY(0); /* Tilbage til start */
+  }
+}
+
+.sw {
+  left: 39.2rem;
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: auto;
+  z-index: 10;
 }
 
 .headline-strong {
-  font-size: 30px;
+  font-size: 35px;
   color: #630303;
 }
 
 @media (max-width: 700px) {
-  /* hide hero overlay text on small / mobile screens */
-  .hero-text {
+  .hero-center {
     display: none;
   }
-  /* adjust hero-center so it doesn't overlap small screens */
-  .hero-center {
+  .sw {
+    display: none;
+  }
+  .hero-text {
     display: none;
   }
 }
 /* Hero */
 .logo_box {
   text-align: center;
-  padding: 0rem 0rem 1rem;
+  padding: 3rem 0rem 3rem;
 }
 
 .logo_box .logo {
@@ -295,7 +328,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   position: relative;
   z-index: 50;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -303,7 +335,7 @@ a {
 
 /* Logo */
 .nav__logo img {
-  width: 60px;
+  width: 90px;
   height: auto;
 }
 
