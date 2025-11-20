@@ -407,6 +407,8 @@ a {
 
 /* App */
 
+/* App */
+
 .app-section {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -510,6 +512,30 @@ a {
   margin-bottom: 20px;
   line-height: 1.4;
 }
+@@ -421,32 +561,86 @@
+
+/* --- Mobile layout for App --- */
+@media (max-width: 899px) {
+  .app-section {
+    grid-template-columns: 1fr;
+  }
+
+  .appleqr,
+  .googleqr,
+  #text_download,
+  .desktop_overskrift,
+  #desk_only {
+    display: none;
+  }
+
+  .app_mobile,
+  .google_mobile {
+    display: block;
+  }
+  .phone img {
+    width: 100%;
+  }
+}
 .content {
   display: flex;
   flex-direction: column;
@@ -523,6 +549,63 @@ a {
   display: flex;
   gap: 40px;
   margin-top: 20px;
+}
+
+.appleqr,
+.googleqr {
+  max-width: 100%;
+}
+
+.qr-item {
+  text-align: center;
+}
+
+.qr-item p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.qr-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* App */
+
+.app-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: #fff;
+  gap: 60px;
+}
+
+.content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Add this to center children horizontally */
+  max-width: 700px; /* Optional: set a max width */
+  margin: 0 auto; /* Center the block itself */
 }
 
 .appleqr,
@@ -569,7 +652,7 @@ a {
   .googleqr,
   #text_download,
   .desktop_overskrift,
-  #desk_only {
+  .desk_only {
     display: none;
   }
 
