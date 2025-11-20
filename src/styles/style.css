@@ -17,10 +17,46 @@ body {
 video {
   width: 100%;
 }
+
+.hero video {
+  display: block;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+.hero-text {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  color: #fff;
+  z-index: 5;
+  line-height: 1.1;
+  font-weight: 700;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+.hero-text p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.headline-strong {
+  font-size: 30px;
+  color: #630303;
+}
+
+@media (max-width: 480px) {
+  .hero-text p {
+    display: none;
+  }
+  .hero-text {
+    display: none;
+  }
+}
 /* Hero */
 .logo_box {
   text-align: center;
-  padding: 4rem 1rem 3rem;
+  padding: 0rem 0rem 1rem;
 }
 
 .logo_box .logo {
@@ -71,16 +107,35 @@ video {
 .section-green {
   background-color: #a0a692;
   color: #fdfdfd;
+  margin: 30px 0px;
+
+  background-image: url("/img/flow.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  opacity: 2;
 }
 
 .section-grey {
   background-color: #718a86;
   color: #fdfdfd;
+  margin: 30px 0px;
+  background-image: url("/img/flow.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  opacity: 2;
 }
 
 .section-light {
   background-color: #f2ecec;
   color: #333;
+  margin: 30px 0px;
+  background-image: url("/img/flow.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  opacity: 2;
 }
 
 /* Tekst */
@@ -122,12 +177,11 @@ video {
 .footer {
   background-color: #2b0f0f;
   color: white;
-
   text-align: center;
 }
 
 .footer-top {
-  background-image: url("img/heste-footer.png");
+  background-image: url("/img/heste-footer.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -239,6 +293,8 @@ a {
   align-items: center;
   padding: 1rem;
   position: relative;
+  z-index: 50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Logo */
@@ -346,6 +402,90 @@ a {
 .h2omos {
   margin: 0 auto;
   padding: 1.5rem 1.5rem;
+  text-align: center;
+}
+
+/* App */
+
+.app-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: #fff;
+  gap: 60px;
+}
+
+.app-section::before {
+  content: "";
+  position: absolute;
+  inset: -20%; /* lidt ekstra så hjørnerne dækkes */
+  background-image: url("/img/flow.svg");
+  background-repeat: no-repeat;
+  background-size: 80%; /* gør SVG mindre */
+  background-position: center;
+  opacity: 50%;
+  transform: rotate(-20deg); /* gør den skrå */
+  z-index: 0; /* bag alt indhold */
+  pointer-events: none; /* ikke blokere klik */
+}
+
+/* Alt indhold skal ligge ovenpå */
+.app-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Add this to center children horizontally */
+  max-width: 700px; /* Optional: set a max width */
+  margin: 0 auto; /* Center the block itself */
+}
+
+.qr-wrapper {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.appleqr,
+.googleqr {
+  max-width: 100%;
+}
+
+.qr-item {
+  text-align: center;
+}
+
+.qr-item p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.qr-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* App */
@@ -442,11 +582,65 @@ a {
   }
 }
 
+.center_logo {
+  display: none;
+  transition: transform 0.5s;
+}
+.center_logo:hover {
+  transform: rotate(180deg);
+}
+.nav__circle {
+  display: none;
+  box-shadow: rgba(179, 179, 179, 0.3) 0px 3px 0px;
+}
 /* --- Desktop layout for Om os --- */
 @media (min-width: 900px) {
   .omos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
   }
+  .nav__circle {
+    width: 150px;
+    height: 150px;
+    background: #f5f0e7;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .center_logo {
+    width: 140px;
+    height: 140px;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    transition: transform 0.5s;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+  .center_logo:hover {
+    transform: rotate(180deg);
+  }
+}
+.omos-section::before {
+  content: "";
+  position: absolute;
+  inset: -20%; /* lidt ekstra så hjørnerne dækkes */
+  background-image: url("/img/flow.svg");
+  background-repeat: no-repeat;
+  background-size: 80%; /* gør SVG mindre */
+  background-position: center;
+  opacity: 50%;
+  transform: rotate(-20deg); /* gør den skrå */
+  z-index: 0; /* bag alt indhold */
+  pointer-events: none; /* ikke blokere klik */
 }
