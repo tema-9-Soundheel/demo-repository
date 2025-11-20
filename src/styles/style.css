@@ -594,9 +594,33 @@ a {
 .google_mobile {
   display: none;
 }
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.underside1 {
+  padding-top: 150px;
+  text-align: center;
+}
+.underside img {
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin: 0% auto;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 50px;
+}
 /* --- Mobile layout for App --- */
 @media (max-width: 899px) {
+  .grid_1-1 {
+    display: block;
+  }
   .app-section {
     grid-template-columns: 1fr;
   }

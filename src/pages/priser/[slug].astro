@@ -25,5 +25,15 @@ const { price } = Astro.props;
 ---
 
 <Pagelayout>
-  <h1>{price.navn}</h1>
+  <section class="grid_1-1">
+    <div class="underside1">
+      <h1>{price.navn}</h1>
+      <h3>Tilgængelig for {price.medarbejdere} brugere</h3>
+      <h2>Pris: {price.pris} DKK / År ekskl. moms</h2>
+      <a href="#" class="btn">Vælg plan</a>
+    </div>
+    <div class="underside">
+      <img src="/img/soundgirl2 1.webp" alt="pige der lytter" />
+    </div>
+  </section>
 </Pagelayout>
