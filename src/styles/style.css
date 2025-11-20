@@ -392,13 +392,34 @@ a {
 .nav__links a:hover {
   color: #a6281d;
 }
+.mobil-app {
+  display: block;
 
+  gap: 30px;
+  justify-content: center;
+  padding-top: 20px;
+}
+.desktop-app {
+  display: none;
+}
+
+.mobil_bund{
+  max-width: 100%;
+}
 /* --- Desktop version --- */
 @media (min-width: 768px) {
+  .mobil-app {
+    display: none;
+  }
+  .desktop-app {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
   .nav__burger {
     display: none; /* Burger forsvinder */
   }
 
+ 
   .nav__links {
     position: static;
     height: auto;
@@ -440,183 +461,19 @@ a {
   padding: 1.5rem 1.5rem;
   text-align: center;
 }
+/* app */
 
-/* App */
-
-.app-section {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 80px;
-  background: #fff;
-  gap: 60px;
-}
-
-.app-section::before {
-  content: "";
-  position: absolute;
-  inset: -20%; /* lidt ekstra så hjørnerne dækkes */
-  background-image: url("/img/flow.svg");
-  background-repeat: no-repeat;
-  background-size: 80%; /* gør SVG mindre */
-  background-position: center;
-  opacity: 50%;
-  transform: rotate(-20deg); /* gør den skrå */
-  z-index: 0; /* bag alt indhold */
-  pointer-events: none; /* ikke blokere klik */
-}
-
-/* Alt indhold skal ligge ovenpå */
-.app-section > * {
-  position: relative;
-  z-index: 1;
-}
-
-.content h2 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-}
-
-.content p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.4;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Add this to center children horizontally */
-  max-width: 700px; /* Optional: set a max width */
-  margin: 0 auto; /* Center the block itself */
-}
-
-.qr-wrapper {
-  display: flex;
-  gap: 40px;
-  margin-top: 20px;
-}
-
-.appleqr,
-.googleqr {
-  max-width: 100%;
-}
-
-.qr-item {
+#download {
   text-align: center;
+  margin-top: 100px;
 }
 
-.qr-item p {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.qr-item img {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-}
-
-.phone img {
+.app_section {
+  overflow-x: hidden;
   width: 100%;
-  height: auto;
-  display: block;
+  position: relative;
 }
-
-/* App */
-
-.app-section {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 80px;
-  background: #fff;
-  gap: 60px;
-}
-
-.content h2 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-}
-
-.content p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.4;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Add this to center children horizontally */
-  max-width: 700px; /* Optional: set a max width */
-  margin: 0 auto; /* Center the block itself */
-}
-
-.qr-wrapper {
-  display: flex;
-  gap: 40px;
-  margin-top: 20px;
-}
-
-.appleqr,
-.googleqr {
-  max-width: 100%;
-}
-
-.qr-item {
-  text-align: center;
-}
-
-#text_download {
-  text-align: center;
-}
-.qr-item p {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.qr-item img {
-  max-width: 80%;
-  object-fit: contain;
-}
-
-.phone img {
-  width: 160%;
-  height: auto;
-  display: block;
-}
-.app_mobile {
-  display: none;
-}
-.google_mobile {
-  display: none;
-}
-
-/* --- Mobile layout for App --- */
-@media (max-width: 899px) {
-  .app-section {
-    grid-template-columns: 1fr;
-  }
-
-  .appleqr,
-  .googleqr,
-  #text_download,
-  .desktop_overskrift,
-  #desk_only {
-    display: none;
-  }
-
-  .app_mobile,
-  .google_mobile {
-    display: block;
-  }
-  .phone img {
-    width: 100%;
-  }
-}
+/* desktop app */
 
 .center_logo {
   display: none;
@@ -679,4 +536,9 @@ a {
   transform: rotate(-20deg); /* gør den skrå */
   z-index: 0; /* bag alt indhold */
   pointer-events: none; /* ikke blokere klik */
+}
+.omos-section {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }

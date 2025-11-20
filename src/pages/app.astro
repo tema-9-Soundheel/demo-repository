@@ -3,47 +3,24 @@ import PageLayout from "../layout/pagelayout.astro";
 ---
 
 <PageLayout>
-  <section class="app-section">
-    <div class="content">
-      <h2>Vores app</h2>
-      <p>Download ved at scanne<br />QR-koden</p>
+  <section class="app_section">
+    <h1 id="download">Download nu</h1>
+    <div class="desktop-app">
+      <div>
+        <img src="public/img/appleurl.png" alt="" />
 
-    <section class="app-section">
-  <div class="content">
-    <h2 class="desktop_overskrift">Vores app</h2>
-    <h2 class="mobile_overskrift">Download nu</h2>
-    <p id="text_download">Download ved at scanne<br>QR-koden</p>
-
-    <div class="qr-wrapper">
-      <div class="qr-item">
-        <p id="desk_only">Apple</p>
-        <a href="https://apps.apple.com/dk/app/soundwheel-genoplad-via-musik/id1617422124?l=da">
-        <img src="public/img/appstore_billede.png" class="app_mobile" alt="app">
-        </a>
-        <img src="public/img/appleurl.png" class="appleqr" alt="Apple QR">
+        <img src="public/img/googleurl.png" alt="" />
       </div>
-
-      <div class="qr-item">
-        <p id="desk_only">Google</p>
-        <a href="https://play.google.com/store/apps/details?id=com.soundwheel.soundwheel">
-        <img src="public/img/google_store.png" class="google_mobile" alt="google">
-        </a>
-        <img src="public/img/googleurl.png" class="googleqr" alt="Google QR">
-      <div class="qr-wrapper">
-        <div class="qr-item">
-          <p>Apple</p>
-          <img src="/img/appleurl.png" class="appleqr" alt="Apple QR" />
-        </div>
-
-        <div class="qr-item">
-          <p>Google</p>
-          <img src="/img/googleurl.png" class="googleqr" alt="Google QR" />
-        </div>
-      </div>
+      <img src="public/img/app.png" alt="" />
     </div>
-
-    <div class="phone">
-      <img src="/img/app.png" alt="Phone mockup" />
+    <div class="mobil-app">
+      <a href="https://apps.apple.com/dk/app/soundwheel-genoplad-via-musik/id1617422124?l=da">
+        <img src="public/img/appstore.png" class="desk_onlyapp" alt="" />
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.soundwheel.soundwheel">
+        <img src="public/img/google_store.png" class="desk_onlygoogle" alt="" />
+      </a>
+      <img src="public/img/app.png" class="mobil_bund" alt="" />
     </div>
   </section>
 </PageLayout>
