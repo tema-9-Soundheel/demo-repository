@@ -10,10 +10,8 @@ const options = {
   },
 };
 
-const supaRequest = await fetch(url, options);
-const supaData = await supaRequest.json();
-
-console.log("supaData", supaData);
+const res = await fetch(url, options);
+const supaData = await res.json();
 ---
 
 <style>
@@ -164,11 +162,7 @@ console.log("supaData", supaData);
     </div>
 
     <div class="grid_1-1-1">
-      {
-        supaData.map((price) => {
-          return <Card navn={price.navn} pris={price.pris} beskrivelse={price.medarbejdere} />;
-        })
-      }
+      {supaData.map((price) => <Card data={price} />)}
     </div>
   </div>
 </PageLayout>

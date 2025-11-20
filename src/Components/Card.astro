@@ -1,12 +1,11 @@
 ---
-const navn = Astro.props.navn;
-const pris = Astro.props.pris;
-const medarbejdere = Astro.props.beskrivelse;
+const { variant, data } = Astro.props;
+console.log(data);
 ---
 
 <article class="cards">
-  <h2>{navn}</h2>
-  <p>Op til {medarbejdere} medarbejdere</p>
-  <p>{pris} / År ekskl. moms</p>
-  <a href="#" class="btn">Vælg plan</a>
+  <h2>{data.navn}</h2>
+  <p>Op til {data.medarbejdere} medarbejdere</p>
+  <p>{data.pris} / År ekskl. moms</p>
+  <a href=`/priser/${data.slug}` class="btn">Vælg plan</a>
 </article>

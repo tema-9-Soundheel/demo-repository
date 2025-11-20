@@ -1,0 +1,29 @@
+---
+import Pagelayout from "../../layout/pagelayout.astro";
+
+export async function getStaticPaths() {
+  const url = "https://isqjifohfxtrsvxtqusi.supabase.co/rest/v1/prices";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzcWppZm9oZnh0cnN2eHRxdXNpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMzNjU5NTgsImV4cCI6MjA3ODk0MTk1OH0.5Vs72-oLjBkHaKMO-9z3dvWTKX5xASm6E01uKqSYH0E";
+  const options = {
+    headers: {
+      apikey: key,
+    },
+  };
+
+  const res = await fetch(url, options);
+  const supaData = await res.json();
+
+  return supaData.map((price) => {
+    return {
+      params: { slug: price.slug },
+      props: { price },
+    };
+  });
+}
+
+const { price } = Astro.props;
+---
+
+<Pagelayout>
+  <h1>{price.navn}</h1>
+</Pagelayout>
