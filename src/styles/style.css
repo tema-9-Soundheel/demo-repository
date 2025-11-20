@@ -18,22 +18,24 @@ video {
   width: 100%;
 }
 
+.hero {
+  position: relative;
+}
 .hero video {
   display: block;
   width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
 }
 .hero-text {
   position: absolute;
   left: 1.25rem;
   bottom: 1.25rem;
   color: #fff;
-  z-index: 5;
+  z-index: 10;
   line-height: 1.1;
   font-weight: 700;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
 }
 .hero-text p {
   margin: 0;
@@ -45,11 +47,13 @@ video {
   color: #630303;
 }
 
-@media (max-width: 480px) {
-  .hero-text p {
+@media (max-width: 700px) {
+  /* hide hero overlay text on small / mobile screens */
+  .hero-text {
     display: none;
   }
-  .hero-text {
+  /* adjust hero-center so it doesn't overlap small screens */
+  .hero-center {
     display: none;
   }
 }
