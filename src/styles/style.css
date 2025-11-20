@@ -534,21 +534,52 @@ a {
   text-align: center;
 }
 
+#text_download {
+  text-align: center;
+}
 .qr-item p {
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .qr-item img {
-  width: 150px;
-  height: 150px;
+  max-width: 80%;
   object-fit: contain;
 }
 
 .phone img {
-  width: 100%;
+  width: 160%;
   height: auto;
   display: block;
+}
+.app_mobile {
+  display: none;
+}
+.google_mobile {
+  display: none;
+}
+
+/* --- Mobile layout for App --- */
+@media (max-width: 899px) {
+  .app-section {
+    grid-template-columns: 1fr;
+  }
+
+  .appleqr,
+  .googleqr,
+  #text_download,
+  .desktop_overskrift,
+  #desk_only {
+    display: none;
+  }
+
+  .app_mobile,
+  .google_mobile {
+    display: block;
+  }
+  .phone img {
+    width: 100%;
+  }
 }
 
 .center_logo {
